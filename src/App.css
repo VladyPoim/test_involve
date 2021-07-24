@@ -1,0 +1,499 @@
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100%;
+  margin: 0;
+}
+
+button,
+button::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.exchangeScreen__section {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exchangeScreen__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exchangeForm {
+  width: 100%;
+  max-width: 754px;
+  height: 288px;
+  padding: 28px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: #ffffff;
+  box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.exchangeForm__inputFields {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.inputField {
+  flex: 1;
+  margin: 0 32px;
+}
+
+.inputField__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+
+  color: #3a3a3a;
+}
+
+.inputField__select {
+  margin-top: 36px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+
+  background-color: white;
+
+  color: #3a3a3a;
+}
+
+.inputField__sum {
+  width: 100%;
+  height: 46px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid #cbcbcb;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.inputField__sum input {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  border-radius: 4px;
+
+  font-size: 16px;
+  line-height: 19px;
+  color: #3a3a3a;
+
+  border: none;
+  outline: none !important;
+}
+
+.inputField__sum:focus-within {
+  border: 2px solid #58b4ae;
+}
+
+.exchangeForm__submit {
+  justify-content: flex-end;
+  align-self: center;
+}
+
+.exchangeForm__submit button {
+  width: 125px;
+  height: 48px;
+
+  cursor: pointer;
+  z-index: 0;
+
+  background-color: #58b4ae;
+  border: none;
+  border-radius: 4px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.exchangeForm__submit button:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+   background-color: #4dccc6;
+background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+.exchangeForm__submit button:hover {
+  color: #fff;
+}
+.exchangeForm__submit button:hover:after {
+  top: 0;
+  height: 100%;
+}
+.exchangeForm__submit button:active {
+  top: 2px;
+}
+
+.confirmationScreen__section {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmationScreen__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmationForm {
+  width: 100%;
+  max-width: 394px;
+  height: 263px;
+  padding: 28px 33px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #ffffff;
+  box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.confirmationForm__title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+
+  color: #3a3a3a;
+}
+
+.confirmationForm__details {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.details--title {
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #818181;
+}
+
+.details--value {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  text-align: right;
+
+  color: #3a3a3a;
+}
+
+.confirmationForm__buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.confirmationForm__buttons--cancel {
+  width: 125px;
+  height: 48px;
+  z-index: 0;
+
+  margin: 0 12px;
+
+  cursor: pointer;
+
+  background: #58B4AE;
+  border: 1px solid #58b4ae;
+  border-radius: 4px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: #3a3a3a;
+}
+
+.confirmationForm__buttons--cancel::before,
+.confirmationForm__buttons--cancel::after {
+  background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.confirmationForm__buttons--cancel::before {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.confirmationForm__buttons--cancel::after {
+  content: "";
+  background: #ffffff;
+  z-index: -1;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.confirmationForm__buttons--cancel:hover {
+  color: white;
+}
+
+.confirmationForm__buttons--cancel:hover:after {
+  height: 0;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+}
+
+.confirmationForm__buttons--confirm {
+  width: 125px;
+  height: 48px;
+  z-index: 0;
+
+  margin: 0 12px;
+
+  cursor: pointer;
+
+  background: #58b4ae;
+  border: none;
+  border-radius: 4px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.confirmationForm__buttons--confirm:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+   background-color: #4dccc6;
+background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+.confirmationForm__buttons--confirm:hover {
+  color: #fff;
+}
+.confirmationForm__buttons--confirm:hover:after {
+  top: 0;
+  height: 100%;
+}
+.confirmationForm__buttons--confirm:active {
+  top: 2px;
+}
+
+.successScreen__section {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.successScreen__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.successForm {
+  width: 100%;
+  max-width: 404px;
+  height: 315px;
+  padding: 28px 33px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #ffffff;
+  box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+@keyframes trophy {
+	0% {
+		transform: translateY(500px);
+		opacity: 0;
+	}
+	35% {
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+
+.successForm__svg {
+  margin-top: 10px;
+}
+
+.successForm__svg svg {
+  z-index: 1;
+	animation: trophy 0.5s 1 forwards;
+}
+
+.successForm__title {
+  margin-top: 25px;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+
+  text-align: center;
+  animation: trophy 0.5s 1 forwards;
+
+  color: #3a3a3a;
+}
+
+.successForm__text {
+  margin-top: 8px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  animation: trophy 0.5s 1 forwards;
+
+  text-align: center;
+
+  color: #3a3a3a;
+}
+
+.successForm__button {
+  margin-top: 44px;
+}
+
+.successForm__button button {
+  width: 125px;
+  height: 48px;
+
+  cursor: pointer;
+
+  background: #58b4ae;
+  border: none;
+  border-radius: 4px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+
+.successForm__button button:hover{cursor: pointer}
+button {
+  background: transparent; outline: none;
+  position: relative;
+  border: 2px solid #111;
+  padding: 15px 50px;
+  overflow: hidden;
+}
+
+/*button:before (attr data-hover)*/
+.successForm__button button:hover:before{opacity: 1; transform: translate(0,0);}
+.successForm__button button:before{
+  content: attr(data-hover);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 0;
+  transform: translate(-100%,0);
+  transition: all .3s ease-in-out;
+}
+  /*button div (button text before hover)*/
+  .successForm__button button:hover div{opacity: 0; transform: translate(100%,0)}
+  .successForm__button button div{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    transition: all .3s ease-in-out;
+  }
